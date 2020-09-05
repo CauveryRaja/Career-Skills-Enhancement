@@ -1,7 +1,7 @@
 {
-  "name": "authapp",
+  "name": "cseapp",
   "version": "1.0.0",
-  "description": "cse authentication app",
+  "description": "Career Skills Enhancement app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
