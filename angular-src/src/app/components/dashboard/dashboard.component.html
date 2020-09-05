@@ -1,0 +1,23 @@
+<h2>
+  Welcome !!!
+</h2>
+<div class="row">
+<div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+     *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+     [routerLinkActiveOptions]="{exact:true}"><a routerLink="/lgmenu">Logic</a></div>
+
+<div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center" 
+     *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+     [routerLinkActiveOptions]="{exact:true}"><a routerLink="/apmenu">General Aptitude</a></div>
+</div>
+
+<div class="row">
+    <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+         *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+         [routerLinkActiveOptions]="{exact:true}"><a routerLink="/tapmenu">Technical Aptitude</a></div>
+    
+    <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center" 
+         *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+         [routerLinkActiveOptions]="{exact:true}"><a routerLink="/essay">Essay writing</a></div>
+</div>
+    

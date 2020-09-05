@@ -1,0 +1,277 @@
+/* You can add global styles to this file, and also import other style files */
+button a {
+    text-decoration:none;
+    color:white;
+}
+
+div button a {
+    text-decoration:none;
+    color:white;
+}
+
+div a {
+    text-decoration: none;
+    color:black;
+}
+
+.back {
+    text-decoration:none;
+    float: right;
+    width:40px;
+    height: 40px;
+    color:white;
+    border-radius:50%;
+    background: blue;
+}
+
+.backBtn {
+    color:white;
+    top:50%;
+    left:50%;
+    transform:translate(12%,-58%);
+}
+
+.typeGrids {
+    position: absolute;
+    background-color: blue;
+    min-width: 84%;
+    min-height: 300px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0.5em;
+    grid-auto-rows:minmax(300px,auto);
+}
+
+.nested {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    background: red;
+}
+
+.content {
+    background:lightblue;
+}
+
+.nested > div {
+    border: 0.2em solid black;
+    background:grey;
+}
+
+.hide {
+    top:0px;
+    left:0px;
+    position:fixed;
+    width:100%;
+    height:100%;
+    z-index:998;
+    background: black;
+}
+
+.timer {
+    position: relative;
+    background:black;
+    border:10px solid transparent;
+    border-color:#005EFF;
+    border-radius:10%;
+    color:white;
+    height:60px;
+    width:120px;
+    float:right;
+}
+
+.bgGrids {
+    top:0;
+    left:0;
+    position: absolute;
+    z-index:-1;
+    background-color: blue;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
+    grid-auto-rows:minmax(104px,auto);
+}
+
+.cube {
+    background: #FDFAFA;
+    z-index:-1;
+}
+
+.cubeX {
+    background: white;
+    z-index:-1;
+    animation:spinX 2s linear infinite;
+}
+
+@keyframes spinX {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(360deg);
+    }
+}
+
+
+.cubeY {
+    background: white;
+    z-index:-1;
+    animation:spinY 2s linear infinite;
+}
+
+@keyframes spinY {
+    0% {
+        transform: rotate3d(0deg);
+    }
+    100% {
+        transform: rotate3d(360deg);
+    }
+}
+
+.loader {
+    min-width:100%;
+    min-height:100%;
+}
+
+.spinner {
+    top:50%;
+    left:50%;
+    transform:translate(-105%,-105%);
+    width:80px;
+    height:80px;
+    background:#9A9696;
+    border-radius:50%;
+    position: absolute;
+    margin: 50px;
+    display: inline-block;
+}
+
+.spinner_1:after,.spinner_1:before {
+    display: block;
+    content:'';
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.spinner_1:after {
+    border-radius:50%;
+    top:0px;
+    left:0px;
+    position: absolute;
+    border:4px solid transparent;
+    border-top-color:#005EFF;
+    border-bottom-color:#005EFF;
+    animation:spinny 2s linear infinite;
+}
+
+.spinner_2:after,.spinner_2:before {
+    display: block;
+    content:'';
+    width:80px;
+    height:80px;
+    border-radius:50%;
+}
+
+.spinner_2:after {
+    border-radius:50%;
+    top:0px;
+    left:0px;
+    position: absolute;
+    border:4px solid transparent;
+    border-left-color:#005EFF;
+    border-right-color:#005EFF;
+    animation:spinny_2 2s linear infinite;
+}
+
+/*
+.spinner_3:after,.spinner_3:before {
+    display: block;
+    content:'';
+    width:20px;
+    height:20px;
+    border-radius:50%;
+}
+
+.spinner_3:after {
+    border-radius:50%;
+    top:0px;
+    left:0px;
+    position: absolute;
+    border:4px solid #4CA160 transparent;
+}*/
+
+
+.spinner_3 {
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position: absolute;
+    border:4px solid transparent;
+    border-color: #005EFF;
+}
+
+/*
+.spinner_4:after,.spinner_4:before {
+    display: block;
+    content:'';
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background-color:#005EFF;
+}
+
+.spinner_4:after {
+    border-radius:50%;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position: absolute;
+    background-color:#005EFF;
+    animation:spinny_3 2s linear infinite;
+}
+*/
+
+@keyframes spinny {
+    0% {
+        transform:rotate(0deg) scale(1);
+    }
+    50% {
+        transform:rotate(45deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes spinny_2 {
+    0% {
+        transform:rotate(0deg) scale(1);
+    }
+    50% {
+        transform:rotate(45deg) scale(2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes spinny_3 {
+    0% {
+        transform:opacity(0) scale(1);
+    }
+    50% {
+        transform:opacity(1) scale(1.6);
+    }
+    100% {
+        transform:opacity(0) scale(1);
+    }
+}

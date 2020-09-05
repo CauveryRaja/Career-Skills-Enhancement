@@ -1,0 +1,102 @@
+<img [src]=image alt="photo" style="max-width:100px;max-height:200px;float:right;margin-right:10px;">
+<div class="page-header" (click)="openModal('name')">
+  <h4>{{profile.name}}</h4>
+</div>
+
+<a routerLink="/profile" class="back"><h2 class="backBtn">&larr;</h2></a>
+
+<div class="page-header">
+  <h4>{{profile.email}}</h4>
+</div>
+<div class="page-header" (click)="openModal('objective')">
+  <h3>Objective:</h3>
+  <h4 style="text-indent:50px;">{{profile.objective}}</h4>
+</div>
+<div class="page-header" (click)="openModal('interests')">
+  <h3>Areas of interest</h3>
+  <h4><ul *ngFor="let item1 of profile.interests"><li>{{item1}}</li></ul></h4>
+</div>       
+<div class="page-header" (click)="openModal('co_curr')">
+  <h3>Co-curricular Activities:</h3>
+  <h4><ul *ngFor="let item1 of profile.co_curr"><li>{{item1}}</li></ul></h4>
+</div>
+<div class="page-header" (click)="openModal('extra_curr')">
+  <h3>Extra-curricular Activities:</h3>
+  <h4><ul *ngFor="let item1 of profile.extra_curr"><li>{{item1}}</li></ul></h4>
+</div>
+
+<button type="button" class="btn btn-info" (click)="submit()">Submit</button>       
+
+<h3>Upload new photo</h3>
+
+<input type="file" class="form-control" placeholder="Upload file..." 
+       name="logo" (change)="fileChangeEvent($event)" />
+
+
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title">{{heading}}</h2>
+      </div>
+      <div class="modal-body">
+        <div [ngStyle]="{'display':showin}">
+          <h3>{{tips}}</h3>
+          <form [ngStyle]="{'background-color':saved}">
+              <label>Change {{read}}:</label>
+              <input type="text" #new class="form-control">
+              <button class="btn btn-success" (click)="save1(new.value)">Save</button>
+          </form>
+        </div>
+        <div [ngStyle]="{'display':showin2}">
+            <h3>{{tips}}</h3>
+            <ul *ngFor="let one of lists">
+              <div class="row">
+              <li class="col-md-10 col-xs-10">{{one}}</li>
+              <button type="button" class="close col-md-2 col-xs-2" aria-label="Close" (click)="delete(one)"><span aria-hidden="true">&times;</span></button>
+              </div>             
+            </ul>
+            <form [ngStyle]="{'background-color':saved }">
+                <label>Add new {{read}}:</label>
+                <input type="text" #new2 class="form-control">
+                <button class="btn btn-success" (click)="save(new2.value)">Save</button>
+            </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" (click)="onCloseHandled()" >Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf=spin class="spinner">
+  <div class="spinner_1"></div>
+  <div class="spinner_2"></div>
+  <div class="spinner_3"></div>
+  <div class="spinner_4"></div>
+</div>
+
+<!--
+
+<div class="backdrop" *ngIf=greeting [ngStyle]="{'display':displayGreeting}"></div>
+<div class="modal" tabindex="-1" role="dialog" *ngIf=greeting [ngStyle]="{'display':displayGreeting}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color:#005EFF;color:white">
+        <button type="button" class="close" aria-label="Close" (click)="onGreeting()"><span aria-hidden="true"><h2 style="color:white">&times;</h2></span></button>
+        <h2 class="modal-title">Resume development</h2>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h3 style="text-indent:30px;">Once you have updated your resume,make sure to submit.
+            Only then it gets saved.
+          </h3>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="onGreeting()" >OK</button>
+      </div>
+    </div>
+  </div>
+</div>-->

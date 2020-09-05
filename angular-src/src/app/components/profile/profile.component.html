@@ -1,0 +1,31 @@
+<div *ngIf="user">
+
+    <img [src]=email alt="logo"
+    style="max-width:100px;max-height:100px;float:right;margin-right:10px;border-radius:30%"><br>
+  <h2 class="page-header">{{user.name}}</h2>
+  
+
+  <ul class="list-group">
+    <li class="list-group-item">Username :  {{user.username}}</li>
+    <li class="list-group-item">Email : {{user.email}}</li>
+  </ul>
+</div>
+
+<h4>Choose new photo:
+<input type="file" class="form-control" placeholder="Upload file..." 
+       name="photo" (change)="fileChangeEvent($event)" />
+<br>
+
+<button *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+[routerLinkActiveOptions]="{exact:true}" class="btn btn-success">
+<a routerLinkActive="active" [routerLink]="['/resume',{email:send}]">View Resume</a>
+</button>
+
+<div *ngIf=spin class="spinner">
+    <div class="spinner_1"></div>
+    <div class="spinner_2"></div>
+    <div class="spinner_3"></div>
+    <div class="spinner_4"></div>
+  </div>
+  
+

@@ -1,0 +1,23 @@
+{
+  "name": "authapp",
+  "version": "1.0.0",
+  "description": "cse authentication app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "multer": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Cauvery Raja S",
+  "license": "ISC"
+}

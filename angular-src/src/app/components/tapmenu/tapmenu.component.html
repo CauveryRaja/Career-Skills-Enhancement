@@ -1,0 +1,29 @@
+<a routerLink="/dashboard" class="back"><h2 class="backBtn">&larr;</h2></a>
+
+<h1>Choose your section:</h1>
+<div class="container">
+    <div class="row">
+        <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/taptitude',{link:link1}]">Java</a>
+        </div>
+        <div class="well col-lg-5 col-xs-12" style="text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/taptitude',{link:link2}]">C++</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/taptitude',{link:link3}]">C</a>
+        </div>
+        <div class="well col-lg-5 col-xs-12" style="text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/taptitude',{link:link4}]">Datastructures</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf=spin class="spinner">
+    <div class="spinner_1"></div>
+    <div class="spinner_2"></div>
+    <div class="spinner_3"></div>
+    <div class="spinner_4"></div>
+</div>
+
+<!--
+  
+<p>
+  evaluate works!{{now}}
+</p>
+{{curoption}}{{color}}-->
+<div class="well">
+    <h3 class="page-header">{{apt1.question}}</h3>
+    <h4>
+      <div [class]="color.option1"><!--{{color.option1}}-->
+      <input type="radio" name="options" value="op1"/>{{apt1.option1}}<br>
+      </div>
+      <div [class]="color.option2"><!--{{color.option2}}-->
+      <input type="radio" name="options" value="op2"/>{{apt1.option2}}<br>
+      </div>
+      <div [class]="color.option3"><!--{{color.option3}}-->
+      <input type="radio" name="options" value="op3"/>{{apt1.option3}}<br>
+      </div>
+      <div [class]="color.option4"><!--{{color.option4}}-->
+      <input type="radio" name="options" value="op4"/>{{apt1.option4}}<br>
+      </div>
+    </h4>
+    <!--{{apt1.answer}}-->
+    <button class="btn btn-info" (click)="checkPre()" *ngIf=show1>Previous</button>
+    <button class="btn btn-info" (click)="check()" *ngIf=show2>Next</button>
+    <button class="btn btn-success" *ngIf=show3 (click)="onTestSubmit()">Submit</button>
+
+</div>
+<br>
+<h4>Solution:<br>
+  {{apt1.solution}}
+</h4> 
+<!--Index:{{i}}
+{{colors}}
+{{answers}}
+{{link}}-->

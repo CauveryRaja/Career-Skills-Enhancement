@@ -1,0 +1,25 @@
+<!--<div class="progress" [style]=load>
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow=inc
+    aria-valuemin="0" aria-valuemax="100" [style]=load>
+    </div>
+  </div>-->
+   
+  <h2 class="page-header">Login</h2>
+  <form (submit)="onLoginSubmit()">
+    <div class="form-group">
+      <label>UserName</label>
+      <input type="text" class="form-control" [(ngModel)]="username" name="username">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" [(ngModel)]="password" name="password">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Login">
+  </form>
+
+<div *ngIf=spin class="spinner">
+    <div class="spinner_1"></div>
+    <div class="spinner_2"></div>
+    <div class="spinner_3"></div>
+    <div class="spinner_4"></div>
+</div>

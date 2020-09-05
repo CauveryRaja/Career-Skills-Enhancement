@@ -1,0 +1,27 @@
+<h1>Choose your section:</h1>
+<div class="container">
+    <div class="row">
+        <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/logic',{link:link1}]">Number</a>
+        </div>
+        <div class="well col-lg-5 col-xs-12" style="text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/logic',{link:link2}]">String</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="well col-lg-5 col-xs-12" style="margin-right:20px;text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/logic',{link:link3}]">Array</a>
+        </div>
+        <div class="well col-lg-5 col-xs-12" style="text-align:center"
+            *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" 
+            [routerLinkActiveOptions]="{exact:true}">
+            <a routerLinkActive="active" [routerLink]="['/logic',{link:link4}]">Pattern</a>
+        </div>
+    </div>
+</div>

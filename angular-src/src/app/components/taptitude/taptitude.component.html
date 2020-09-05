@@ -1,0 +1,40 @@
+<div *ngIf=spin class="spinner">
+  <div class="spinner_1"></div>
+  <div class="spinner_2"></div>
+  <div class="spinner_3"></div>
+  <div class="spinner_4"></div>
+</div>
+
+<div class="timer">
+  <h2 style="left:50%;top:50%;transform:translate(-50%,-105%);
+             position:absolute;">{{zero1}}{{minShow-1}}:{{zero2}}{{ticks}}</h2>
+</div>
+<br><br>
+<!--
+<p>
+  Technical aptitude works!!!
+  {{link}} minShow:{{minShow}}
+</p>-->
+
+<br><br>
+<div class="well">
+    <h3 class="page-header">{{apt1.question}}</h3>
+    <h4>
+      <input type="radio" name="options" value="op1" (click)="checkFlag('1')"/>{{apt1.option1}}<br>
+      <input type="radio" name="options" value="op2" (click)="checkFlag('2')"/>{{apt1.option2}}<br>
+      <input type="radio" name="options" value="op3" (click)="checkFlag('3')"/>{{apt1.option3}}<br>
+      <input type="radio" name="options" value="op4" (click)="checkFlag('4')"/>{{apt1.option4}}<br>
+      <!--<button class="btn btn-info" (click)="checkPre()" *ngIf=show1>Previous</button>-->
+      <button class="btn btn-info" (click)="check()" *ngIf=show2>Next</button>
+      <button class="btn btn-success" *ngIf=show3
+        [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+        <a routerLinkActive="active" [routerLink]="['/evaluate',{qtype:type,answers:ans,qlink:link,qsubmit:submit}]">Finish</a>
+      </button>
+    </h4>
+  </div><!--
+  {{i}}
+  {{choice}}
+  {{ans}}-->
+  
+  
+  
