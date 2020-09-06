@@ -43,4 +43,7 @@ Students can build their resume from a basic template.
 ## Usage
 Clone this repo and run `npm install` to install all required dependencies.
 
-This was my College final year project. I just hope its worth sharing. **Happy development!**.
+This was my College final year project. Hope its worth sharing. **Happy coding!**.
+
+## License
+This project is licensed under [MIT License](https://github.com/CauveryRaja/Career-Skills-Enhancement/blob/master/LICENSE)
