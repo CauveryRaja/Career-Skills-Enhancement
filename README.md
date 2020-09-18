@@ -51,7 +51,6 @@ Students can build their resume from a basic template.
 <kbd>
   <img alt="Resume Page" src="https://github.com/CauveryRaja/Career-Skills-Enhancement/blob/master/snapshots/resume.png">
 </kbd>
-![Resume Page](https://github.com/CauveryRaja/Career-Skills-Enhancement/blob/master/snapshots/resume.png)
 
 ## Usage
 Clone this repo and run `npm install` to install all required dependencies.
